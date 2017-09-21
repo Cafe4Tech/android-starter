@@ -1,6 +1,4 @@
-package io.fliu.android_starter.rx;
-
-import java.io.Serializable;
+package io.fliu.core.rx;
 
 import io.reactivex.functions.Consumer;
 

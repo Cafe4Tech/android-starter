@@ -5,9 +5,9 @@ package io.fliu.core.utils;
  * Created by liulingfeng on 2017/2/28.
  */
 
-public class CircleBuffer<T> {
+public class ByteCircleBuffer {
     private static final int DEFAULT_SIZE = 512;
-    private Object[] buff;
+    private byte buff[];
     private int h;
     private int t;
     private int c; //next available pos to put byte
@@ -15,17 +15,17 @@ public class CircleBuffer<T> {
     private boolean overflow;
     volatile int contentLen;
 
-    public CircleBuffer(){
-        buff = new Object[DEFAULT_SIZE];
+    public ByteCircleBuffer(){
+        buff = new byte[DEFAULT_SIZE];
         reset();
     }
 
-    public CircleBuffer(int len){
-        buff = new Object[len];
+    public ByteCircleBuffer(int len){
+        buff = new byte[len];
         reset();
     }
 
-    public void push(T[] bs, int len){
+    public void push(byte[] bs, int len){
         len = bs.length > len ? len : bs.length;
         for (int m = 0; m < len; m ++){
             buff[c] = bs[m];
@@ -50,7 +50,7 @@ public class CircleBuffer<T> {
         contentLen = getAvailability();
     }
 
-    public void read(T bs[], int len){
+    public void read(byte bs[], int len){
         if (bs == null) {
             return;
         }
@@ -61,15 +61,15 @@ public class CircleBuffer<T> {
 
         for (int m = 0; m < len; m ++){
             if (rw + m <= t){
-                bs[m] = (T) this.buff[rw + m];
+                bs[m] = this.buff[rw + m];
             }
             else {
-                bs[m] = (T) this.buff[h + m - (t - rw) - 1];
+                bs[m] = this.buff[h + m - (t - rw) - 1];
             }
         }
     }
 
-    public void pop(T buff[], int len){
+    public void pop(byte buff[], int len){
         if (buff == null) {
             return;
         }
@@ -79,7 +79,7 @@ public class CircleBuffer<T> {
         int popLen = contentLen > len ? len : contentLen;
 
         for (int m = 0; m < popLen; m ++){
-            buff[m] = (T) this.buff[rw];
+            buff[m] = this.buff[rw];
             rw ++;
             if (rw > t){
                 rw = h;
@@ -92,7 +92,7 @@ public class CircleBuffer<T> {
 
     /*clear the whole buffer and reset its state*/
     public void flush(){
-        buff = new Object[buff.length];
+        buff = new byte[buff.length];
         reset();
     }
 

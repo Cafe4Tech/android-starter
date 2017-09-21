@@ -1,6 +1,6 @@
-package io.fliu.android_starter.rx.messages;
+package io.fliu.core.rx.messages;
 
-import io.fliu.android_starter.rx.RxMessage;
+import io.fliu.core.rx.RxMessage;
 
 /**
  * Created by liulingfeng on 2017/9/21.

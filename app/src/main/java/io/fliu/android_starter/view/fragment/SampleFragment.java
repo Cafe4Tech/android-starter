@@ -7,4 +7,28 @@ import io.fliu.android_starter.base.BaseFragment;
  */
 
 public class SampleFragment extends BaseFragment{
+    @Override
+    protected int fetchLayoutResource() {
+        return 0;
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void releaseView() {
+
+    }
+
+    @Override
+    protected void subscribeListeners() {
+
+    }
+
+    @Override
+    protected void unsubscribeListeners() {
+
+    }
 }

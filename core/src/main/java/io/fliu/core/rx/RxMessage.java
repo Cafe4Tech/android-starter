@@ -1,4 +1,4 @@
-package io.fliu.android_starter.rx;
+package io.fliu.core.rx;
 
 /**
  * Created by liulingfeng on 2017/9/21.

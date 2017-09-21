@@ -27,6 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //去掉标题栏
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         //沉浸式设置
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {

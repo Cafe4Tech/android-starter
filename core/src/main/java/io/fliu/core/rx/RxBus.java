@@ -1,12 +1,9 @@
-package io.fliu.android_starter.rx;
+package io.fliu.core.rx;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.observers.SerializedObserver;
 import io.reactivex.subjects.PublishSubject;
 import io.reactivex.subjects.Subject;
 
