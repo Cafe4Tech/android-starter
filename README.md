@@ -2,7 +2,7 @@
 我们采用了目前较流行的开源框架构建了一个快速的Android项目脚手架，包括了这些内容
 1. MVVM模式
 2. RxJava异步模式
-3. Retrofit+okhttp
+3. Retrofit+okhttp+volley
 4. Glide
 5. Butterknife+Dagger2
 6. SQLite Orm
