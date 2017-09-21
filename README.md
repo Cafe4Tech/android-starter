@@ -12,7 +12,7 @@
 3. Retrofit+okhttp+volley
 4. Glide
 5. Butterknife+Dagger2
-6. SQLite Orm
+6. GreenDao
 7. Android design library
 8. Material design高star库
 
