@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
     tools:context="io.fliu.android_starter.view.activity.MainActivity">
 
     <TextView
