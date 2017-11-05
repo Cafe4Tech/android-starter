@@ -1,15 +1,38 @@
 package io.fliu.android_starter.view.activity;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
 import io.fliu.android_starter.R;
+import io.fliu.android_starter.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public final class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int fetchLayoutResource() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void init() {
+
+    }
+
+    @Override
+    protected void requestPermission() {
+
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

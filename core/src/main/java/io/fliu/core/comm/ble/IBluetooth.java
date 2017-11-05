@@ -9,4 +9,14 @@ public interface IBluetooth {
     void startScan();
 
     void stopScan();
+
+    void connect();
+
+    void disconnect();
+
+    int send(byte[] bytes);
+
+    void startReceive();
+
+    void stopReceive();
 }

@@ -7,4 +7,7 @@ import io.fliu.android_starter.base.BaseService;
  */
 
 public class SampleService extends BaseService{
+    public SampleService(String name) {
+        super(name);
+    }
 }

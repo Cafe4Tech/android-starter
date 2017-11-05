@@ -39,11 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity{
 
         ButterKnife.bind(this);
 
-        initView();
-
-        bindServices();
-
-        subscribeListeners();
+        init();
     }
 
     @Override
@@ -66,12 +62,6 @@ public abstract class BaseActivity extends AppCompatActivity{
     @Override
     protected void onStop() {
         super.onStop();
-
-        unsubscribeListeners();
-
-        unbindServices();
-
-        releaseView();
     }
 
     @Override
@@ -87,12 +77,8 @@ public abstract class BaseActivity extends AppCompatActivity{
 
 
     protected abstract int fetchLayoutResource();
-    protected abstract void initView();
-    protected abstract void releaseView();
-    protected abstract void bindServices();
-    protected abstract void unbindServices();
-    protected abstract void subscribeListeners();
-    protected abstract void unsubscribeListeners();
+    protected abstract void init();
+    protected abstract void requestPermission();
 
     @Override
     public void onBackPressed() {
@@ -124,4 +110,5 @@ public abstract class BaseActivity extends AppCompatActivity{
     public void setDoubleBackFinishEnabled(boolean doubleBackFinishEnabled) {
         this.doubleBackFinishEnabled = doubleBackFinishEnabled;
     }
+
 }

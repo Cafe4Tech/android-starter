@@ -6,5 +6,6 @@ package io.fliu.android_starter;
 
 public class Config {
 
+    //constants
     public final static long DOUBLE_BACK_INTERVAL = 2000; //双击后退的时间
 }
